@@ -18,15 +18,6 @@ public class UserController {
 	@Autowired
 	private UserDAO userDao;
 	
-	@RequestMapping(value = "hello", method = RequestMethod.GET)
-	@ResponseBody
-	public Afoo getHello() {
-		Afoo afoo = new Afoo();
-		afoo.setName("Brandon");
-		afoo.setSize(42);
-		return afoo;
-	}
-	
 	@RequestMapping(value = "", method = RequestMethod.POST)
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	public void createUser(@RequestBody User user) {
